@@ -1,0 +1,4 @@
+articol = "Donald Trump a devenit favoritul caselor de pariuri să câștige alegerile prezidențiale din noiembrie. Răsturnare de situație în ultimele săptămâni"
+lungime = len(articol)
+partea 1 = articol[:lungime // 2]
+partea 2 = articol[lungime // 2:]
