@@ -1,4 +1,15 @@
-articol = "Donald Trump a devenit favoritul caselor de pariuri să câștige alegerile prezidențiale din noiembrie. Răsturnare de situație în ultimele săptămâni"
+articol = """Guvernul României a anunțat astăzi noi măsuri pentru sprijinirea economiei. În cadrul unei conferințe de presă, premierul a declarat că aceste măsuri sunt esențiale pentru a ajuta cetățenii și companiile afectate de criza economică."""
+
 lungime = len(articol)
-partea 1 = articol[:lungime // 2]
-partea 2 = articol[lungime // 2:]
+parte1 = articol[:lungime // 2]
+parte2 = articol[lungime // 2:]
+
+parte1 = parte1.upper().strip()
+
+parte2 = parte2[::-1]  
+parte2 = parte2.capitalize()  
+parte2 = ''.join(c for c in parte2 if c.isalnum() or c.isspace()) 
+
+rezultat = parte1 + ' ' + parte2
+
+print(rezultat)
