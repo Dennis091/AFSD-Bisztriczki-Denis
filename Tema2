@@ -1,15 +1,9 @@
-articol = """Guvernul României a anunțat astăzi noi măsuri pentru sprijinirea economiei. În cadrul unei conferințe de presă, premierul a declarat că aceste măsuri sunt esențiale pentru a ajuta cetățenii și companiile afectate de criza economică."""
+text = """Într-o dimineață însorită, un grup de copii a ieșit la joacă! Aceștia s-au bucurat de vreme și au petrecut momente frumoase."""  
 
-lungime = len(articol)
-parte1 = articol[:lungime // 2]
-parte2 = articol[lungime // 2:]
-
-parte1 = parte1.upper().strip()
-
-parte2 = parte2[::-1]  
-parte2 = parte2.capitalize()  
-parte2 = ''.join(c for c in parte2 if c.isalnum() or c.isspace()) 
-
-rezultat = parte1 + ' ' + parte2
-
-print(rezultat)
+lung_sir=len(text)
+jum_sir=lung_sir//2
+jum_1=text[0:jum_sir]
+jum_1=jum_1.upper().strip()
+jum_2=text[jum_sir:lung_sir]
+jum2_rev=jum_2[::-1].replace(".","").capitalize()
+print(jum_1+jum2_rev)
