@@ -1,26 +1,30 @@
-# Extension Bubble Sort Code
-# importing time module
-import time
+def bubble_sort(arr):
+    # Outer loop to iterate through the list n times
+    for n in range(len(arr) - 1, 0, -1):
 
-# function to implement bubble sort by passing 
-# the following parameters:
-# data is passed for the set of unsorted data values
-# drawdata is used to generate the data bars
-# timer is for the speed range
-def bubble(data, drawData, timer):
-	n = len(data)
-	
-	for i in range(n):
-		for j in range(0, n-i-1):
-			
-			if data[j] > data[j+1]:
-				data[j], data[j+1] = data[j+1], data[j]
-				
-				# if swapped then color becomes Green else stays Red
-				drawData(data, ['Green' if x == j +
-								1 else 'Red' for x in range(len(data))])
-				time.sleep(timer)
-		
-	# sorted elements generated with Green color
-	drawData(data, ['Green' for x in range(len(data))])
+        # Initialize swapped to track if any swaps occur
+        swapped = False
 
+        # Inner loop to compare adjacent elements
+        for i in range(n):
+            if arr[i] > arr[i + 1]:
+                # Swap elements if they are in the wrong order
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+
+                # Mark that a swap has occurred
+                swapped = True
+
+        # If no swaps occurred, the list is already sorted
+        if not swapped:
+            break
+
+
+# Sample list to be sorted
+arr = [39, 12, 18, 85, 72, 10, 2, 18]
+print("Unsorted list is:")
+print(arr)
+
+bubble_sort(arr)
+
+print("Sorted list is:")
+print(arr)
